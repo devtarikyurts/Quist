@@ -26,8 +26,6 @@ const Teammates = () => {
         }
     }
 
-    console.log(currentTeammates);
-
 
     const teammates = currentTeammates.map(teammate => {
 

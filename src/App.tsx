@@ -25,8 +25,6 @@ const App = () => {
       const res = await fetch('https://valorant-api.com/v1/agents');
       const data = await res.json()
       setAgentsData(data.data)
-      console.log(data.data);
-      
     })()
     
   },[])
@@ -36,7 +34,6 @@ const App = () => {
       const res = await fetch('https://valorant-api.com/v1/competitivetiers');
       const data = await res.json()
       setRanksData(data.data[data.data.length - 1].tiers)
-     
     })()
     
   },[])
