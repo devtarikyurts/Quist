@@ -55,7 +55,7 @@ export const Match = () => {
   }
 
   return (
-    <motion.div className='w-11/12 sm:w-3/5 h-full flex flex-col justify-center items-center rounded-md gap-8'>
+    <motion.div className='w-11/12 sm:w-3/5 h-full flex flex-col justify-center items-center rounded-md gap-20'>
 
 
       <AnimatePresence>
