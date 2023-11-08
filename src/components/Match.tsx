@@ -14,7 +14,7 @@ export const Match = () => {
     return team.map(player => {
       return (
 
-        <motion.li key={player.id} className='w-full h-10 pt-1 pb-1 flex justify-center items-center text-[#FFD700] border border-[#FFD700]  transition duration-700 hover:cursor-pointer rounded-md text-center text-[0.6rem] sm:text-[0.7rem] md:text-[0.8rem] whitespace-normal'>
+        <motion.li key={player.id} className='w-full h-full pt-1 pb-1 flex justify-center items-center text-[#FFD700] border border-[#FFD700]  transition duration-700 hover:cursor-pointer rounded-md text-center text-[0.6rem] sm:text-[0.7rem] md:text-[0.8rem] whitespace-normal'>
           <motion.div
             whileHover={{ x: 5 }}
             whileTap={{ scale: 0.95 }}
@@ -29,7 +29,7 @@ export const Match = () => {
               initial={{ opacity: 0, scale: 0, x: -100 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               exit={{ opacity: 0, scale: 0, x: -100 }}
-              className="flex w-1/5 justify-center items-center bg-[#FFD700] text-black rounded-md">{player.username ? player.username : player.id}</motion.span>
+              className="flex w-1/5 justify-center items-center bg-[#FFD700] font-semibold text-black rounded-md">{player.username ? player.username : player.id}</motion.span>
             <motion.span
               transition={{ duration: 0.6, delay: 0.6 }}
               initial={{ opacity: 0, scale: 0, x: -100 }}
@@ -55,7 +55,7 @@ export const Match = () => {
   }
 
   return (
-    <motion.div className='w-11/12 sm:w-3/5 h-full flex flex-col justify-center sm:justify-around items-center rounded-md gap-8'>
+    <motion.div className='w-11/12 sm:w-3/5 h-full flex flex-col justify-center items-center rounded-md gap-8'>
 
 
       <AnimatePresence>
@@ -66,7 +66,7 @@ export const Match = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -1000 }}
           key={'first-team'}
-          className='w-4/5 h-2/5 flex justify-center items-center flex-col gap-2 overflow-hidden'>
+          className='w-4/5 h-[40%] flex justify-center items-center ml-2 flex-col gap-2 overflow-hidden'>
           {renderTeams(team1)}
         </motion.div>
 
@@ -88,7 +88,7 @@ export const Match = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 1000 }}
           key={'second-team'}
-          className='w-4/5 h-2/5 flex flex-col justify-center items-center gap-2 overflow-hidden'>
+          className='w-4/5 h-[40%] flex flex-col justify-center items-center ml-2 gap-2 overflow-hidden'>
           {renderTeams(team2)}
         </motion.div>
 
