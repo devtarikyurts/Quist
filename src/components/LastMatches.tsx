@@ -1,14 +1,13 @@
 import { RiTriangleFill } from "react-icons/ri";
 import { useApp } from "../AppContext";
-import { AnimatePresence, motion, useAnimationControls, useTime, useTransform } from "framer-motion"
-import { Home } from "../pages/Home";
+import { motion, useAnimationControls } from "framer-motion"
 import { Match } from "./Match";
 import { useEffect } from "react";
 
 
 export const LastMatches = () => {
 
-    const { player, agentsData,setPage, setModal, modal} = useApp();
+    const { player, agentsData,setPage, modal} = useApp();
 
     const controls = useAnimationControls()
   

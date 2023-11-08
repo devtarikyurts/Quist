@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useApp } from "../AppContext";
 import { useEffect } from 'react'
 import { AgentType, RankType } from "../types";
@@ -35,8 +35,6 @@ export const Info = () => {
         return mostPlayedAgent;
     }
 
-
-    const rank = ranksData.find(rank => rank.divisionName.toLocaleLowerCase() === player.rank.toLocaleLowerCase()) as RankType;
     const agentUrl = agentsData.find(agent => agent.displayName.toLocaleLowerCase() === findMostPlayedAgent()?.toLocaleLowerCase())?.displayIcon as string
 
 

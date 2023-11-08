@@ -1,6 +1,4 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import React from 'react'
-import { MdLeaderboard } from 'react-icons/md'
 import { useApp } from '../AppContext'
 import { PlayerType, fakeUsers } from '../api/fakeApi'
 import { Player } from '../pages/Player'
@@ -474,14 +472,7 @@ const fakeLeaderboard = [
 
 const Top3 = () => {
 
-    const { ranksData, agentsData, setPlayer, setPage } = useApp();
-
-
-    const findRankImage = (player: PlayerType) => {
-        const rank = ranksData.find(rank => rank.divisionName.toLocaleLowerCase() === player.rank.toLocaleLowerCase())
-
-        return rank && rank?.smallIcon
-    }
+    const { agentsData, setPlayer, setPage } = useApp();
 
     const jett = agentsData.find(item => item.displayName.toLocaleLowerCase() === 'jett')?.displayIconSmall
 

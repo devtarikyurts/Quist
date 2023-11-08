@@ -1,5 +1,5 @@
 import { useApp } from "../AppContext";
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 
 export const Statistics = () => {
 

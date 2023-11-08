@@ -1,13 +1,12 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import React from 'react'
 import { TeamType, team1, team2 } from '../api/fakeApi'
 import { useApp } from '../AppContext'
 import { Player } from '../pages/Player'
-import { FaArrowLeft, FaBackward } from 'react-icons/fa6'
+import { FaArrowLeft } from 'react-icons/fa6'
 
 export const Match = () => {
 
-  const { agentsData, setModal, modal, setPage} = useApp()
+  const { agentsData, setPage} = useApp()
 
 
 

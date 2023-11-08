@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaUserFriends } from 'react-icons/fa'
 import { FaClockRotateLeft, FaCrosshairs } from 'react-icons/fa6'
 import { useApp } from '../AppContext'

@@ -1,9 +1,8 @@
-import { AnimatePresence, motion } from 'framer-motion'
-import React from 'react'
+import { motion } from 'framer-motion'
 import { useApp } from '../AppContext'
 import { v4 as uuidv4 } from 'uuid';
-import { FaClock, FaGamepad, FaPercentage, FaPlay, FaRegHeart, FaUserFriends } from 'react-icons/fa';
-import { FaCircleCheck, FaHeart, FaPercent, FaUserClock, FaUserGroup } from 'react-icons/fa6';
+import { FaClock} from 'react-icons/fa';
+import { FaCircleCheck, FaHeart, FaPercent } from 'react-icons/fa6';
 
 
 const Teammates = () => {

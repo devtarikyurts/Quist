@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { SearchBar } from '../components/SearchBar'
 import { Leaderboard } from '../components/Leaderboard'
 import { motion } from 'framer-motion'

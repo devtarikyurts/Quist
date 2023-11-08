@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react';
 import './App.css'
 import { AppContext } from './AppContext';
-import { Home } from './pages/Home';
 import { PlayerType, fakeUsers } from './api/fakeApi';
 import {useEffect} from 'react'
 import { AgentType, RankType } from './types';
