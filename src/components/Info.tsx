@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { useApp } from "../AppContext";
 import { useEffect } from 'react'
-import { AgentType, RankType } from "../types";
+import { AgentType } from "../types";
 
 export const Info = () => {
 
-    const { player, agentsData, ranksData, setCurrentAgent } = useApp();
+    const { player, agentsData, setCurrentAgent } = useApp();
 
     useEffect(() => {
         const currentAgent = agentsData.find(agent => agent.displayName.toLocaleLowerCase() === findMostPlayedAgent()?.toLocaleLowerCase()) as AgentType
