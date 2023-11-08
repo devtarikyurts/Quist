@@ -17,7 +17,7 @@ export const Player = () => {
          initial={{ opacity: 0,scale:0}}
          animate={{ opacity: 1,scale:1 }}
          exit={{ opacity: 0, scale:0}} 
-         className='w-10 h-10 flex justify-center items-center border rounded-md border-[#FFD700] text-[#FFD700] absolute top-2 left-2'  onClick={() => {
+         className='w-10 h-10 flex justify-center items-center border rounded-md border-[#FFD700] text-[#FFD700] absolute top-2 left-2 transition hover:bg-[#FFD700] hover:text-[#000]'  onClick={() => {
 
           setPage(<Home />)
         }}>  <FaArrowLeft /></motion.button >
