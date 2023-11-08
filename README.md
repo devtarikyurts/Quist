@@ -1,5 +1,5 @@
 <<<<<<< HEAD
 # Quist
-VALORANT statistics tracking application
+VALORANT statistics tracking application example
 =======
 # React + TypeScript + Vite
