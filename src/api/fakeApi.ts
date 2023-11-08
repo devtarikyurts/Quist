@@ -439,4 +439,4 @@ export const team2 = [
   { id: 10, agent: "Gekko", kills: 10, assists: 10, deaths: 10, acs: 333 },
 ];
 
-export type TeamType = typeof team2;
+export type TeamType = typeof team1;
