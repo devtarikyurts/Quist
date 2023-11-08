@@ -9,7 +9,7 @@ import { FaArrowLeft } from 'react-icons/fa6';
 export const Player = () => {
 
   const { content,setPage, setModal, modal} = useApp();
-
+  //yo
   return (
     <motion.div className='w-full h-full flex flex-col justify-center items-center p-8 gap-4'>
       <motion.button
