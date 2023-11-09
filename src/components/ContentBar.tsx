@@ -10,11 +10,6 @@ export const ContentBar = () => {
 
     const { setContent, content} = useApp();
 
-    const logic = content
-
-    console.log(content.type.name === 'LastMatches' ? 'yes' : 'no');
-    
-
     const handleClick = (content: JSX.Element) => {
         setContent(content)
     }
