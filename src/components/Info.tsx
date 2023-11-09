@@ -2,10 +2,13 @@ import { motion } from "framer-motion";
 import { useApp } from "../AppContext";
 import { useEffect } from 'react'
 import { AgentType } from "../types";
+import { Home } from "../pages/Home";
+import { FaArrowLeft } from "react-icons/fa6";
+import { LastMatches } from "./LastMatches";
 
 export const Info = () => {
 
-    const { player, agentsData, setCurrentAgent } = useApp();
+    const { player, agentsData, setCurrentAgent, setPage,setContent } = useApp();
 
     useEffect(() => {
         const currentAgent = agentsData.find(agent => agent.displayName.toLocaleLowerCase() === findMostPlayedAgent()?.toLocaleLowerCase()) as AgentType
@@ -42,19 +45,27 @@ export const Info = () => {
 
         <motion.div
             key="player_info"
-            transition={{ ease:'easeInOut', duration: 0.4, delay: 0.2 }}
+            transition={{ ease: 'easeInOut', duration: 0.4, delay: 0.2 }}
             initial={{ opacity: 0, x: 500, }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 500}}
-            className={`w-full h-full flex flex-col justify-center items-center rounded-md border border-[#FFD700]`} >
-            <div className="w-2/6 rounded-full overflow-hidden shadow-sm shadow-[#FFD700]">
+            exit={{ opacity: 0, x: 500 }}
+            className={`w-full h-full flex flex-col justify-center items-center rounded-md border border-[#FFD700] relative`} >
+            <motion.button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className='w-10 h-10 flex justify-center items-center border rounded-md border-[#FFD700] text-[#FFD700] absolute top-2 left-2 transition duration-300 hover:bg-[#FFD700] hover:text-[#000]' onClick={() => {
+                    setContent(<LastMatches />)
+                    setPage(<Home />)
+                }}>  <FaArrowLeft /></motion.button >
+            <div className="w-20 h-auto sm:w-32 rounded-full overflow-hidden shadow-sm shadow-[#FFD700]">
                 <img className="w-full overflow-hidden" src={agentUrl}>
                 </img>
             </div>
-            <span className="w-2/6 h-1/2 flex justify-center items-center font-semibold text-[#FFD700] text-xl">
+            <span className="w-2/6 h-1/2 flex justify-center items-center font-semibold text-[#FFD700] text-xl sm:text-2xl">
                 {player.username}
             </span>
         </motion.div>
- 
+
     )
 }
